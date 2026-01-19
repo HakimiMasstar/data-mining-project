@@ -1,0 +1,9 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+venv/
+*.pth
+Datasets/
+Global_Supply_Chain_Simulation/
+class_indices.json
+shipment_audit_log.csv
