@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Fruit Intelligence - Project Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --secondary: #64748b;
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 50px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 900;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .step {
+            flex: 1;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .step-num {
+            display: block;
+            font-weight: 900;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .pill {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 3px;
+            font-weight: 600;
+        }
+
+        .dataset-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .fruit-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px dashed #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .step-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Global Fruit Intelligence</h1>
+        <p>Data Mining & Computer Vision Architecture for Supply Chain Optimization</p>
+    </header>
+
+    <div class="grid">
+        <!-- PROJECT OBJECTIVE -->
+        <div class="card">
+            <h2>Project Objective</h2>
+            <p>Implementation of an <strong>automated quality assurance pipeline</strong> for global fruit shipment monitoring. Focus on identifying high-risk spoilage windows to minimize waste and optimize logistics efficiency.</p>
+            <div>
+                <span class="pill">Automation</span>
+                <span class="pill">Waste Reduction</span>
+                <span class="pill">Global Logistics</span>
+            </div>
+        </div>
+
+        <!-- CRISP-DM -->
+        <div class="card">
+            <h2>CRISP-DM Framework</h2>
+            <div class="step-container">
+                <div class="step"><span class="step-num">1</span>Business Understanding</div>
+                <div class="step"><span class="step-num">2</span>Data Prep & ETL</div>
+                <div class="step"><span class="step-num">3</span>Modeling</div>
+            </div>
+            <div class="step-container">
+                <div class="step"><span class="step-num">4</span>Evaluation</div>
+                <div class="step"><span class="step-num">5</span>Deployment</div>
+            </div>
+        </div>
+
+        <!-- THE DATASET -->
+        <div class="card full-width">
+            <h2>Dataset & Simulation Scope</h2>
+            <p>Utilizing a comprehensive visual dataset to simulate 12 months of global trade across three key nations: <strong>USA, Brazil, and India</strong>.</p>
+            <div class="dataset-grid">
+                <div class="fruit-box">
+                    <strong>🍎 Apples</strong>
+                    <br><small>Fresh & Rotten</small>
+                </div>
+                <div class="fruit-box">
+                    <strong>🍌 Bananas</strong>
+                    <br><small>Fresh & Rotten</small>
+                </div>
+                <div class="fruit-box">
+                    <strong>🍊 Oranges</strong>
+                    <br><small>Fresh & Rotten</small>
+                </div>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--secondary);">
+                *Simulation incorporates environmental variables, seasonal heatwaves, and regional logistics disruptions.
+            </p>
+        </div>
+
+        <!-- ETL PIPELINE -->
+        <div class="card">
+            <h2>ETL Workflow</h2>
+            <p>Data processing through a structured <strong>Engineering Pipeline</strong>:</p>
+            <ul>
+                <li><strong>Extraction:</strong> Sourcing 12,000+ labeled images from distributed repositories.</li>
+                <li><strong>Transformation:</strong> Image normalization, resizing (128x128), and tensor preparation.</li>
+                <li><strong>Loading:</strong> Spatial and temporal distribution into geographic supply chain silos.</li>
+            </ul>
+        </div>
+
+        <!-- TECHNICAL STACK -->
+        <div class="card">
+            <h2>Technical Infrastructure</h2>
+            <p>Core technologies utilized for the intelligence platform:</p>
+            <div>
+                <span class="pill">PyTorch (Deep Learning)</span>
+                <span class="pill">Pandas (Data Mining)</span>
+                <span class="pill">Plotly (BI Visualization)</span>
+                <span class="pill">Star Schema (Data Warehousing)</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Global Fruit Supply Chain Intelligence Project &copy; 2026
+    </footer>
+</div>
+
+</body>
+</html>
