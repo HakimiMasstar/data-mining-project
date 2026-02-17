@@ -4,6 +4,6 @@ __pycache__/
 venv/
 *.pth
 Datasets/
-Global_Supply_Chain_Simulation/
+Global_Supply_Chain_Data/
 class_indices.json
 shipment_audit_log.csv

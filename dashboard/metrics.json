@@ -1,0 +1,13 @@
+{
+  "total_shipments": 13599,
+  "investment": "$670,000",
+  "potential_savings": "$461,580",
+  "net_benefit": "$-208,420",
+  "roi": "69%",
+  "avg_spoilage": "56.57%",
+  "best_country": "USA",
+  "worst_country": "India",
+  "best_fruit": "Orange",
+  "worst_fruit": "Banana",
+  "total_loss": "$769,300"
+}
