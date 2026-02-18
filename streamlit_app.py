@@ -5,7 +5,18 @@ from torchvision import transforms
 from PIL import Image
 import json
 import os
-import gdown
+
+# Try to import gdown, install if not available
+try:
+    import gdown
+except ImportError:
+    st.error("⚠️ Installing required dependency: gdown...")
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "gdown"])
+    import gdown
+    st.success("✓ gdown installed successfully!")
+
 import base64
 from io import BytesIO
 

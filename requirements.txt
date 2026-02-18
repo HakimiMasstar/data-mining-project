@@ -5,3 +5,4 @@ numpy
 pillow
 gradio
 plotly
+gdown
