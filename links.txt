@@ -1,0 +1,13 @@
+Data Mining Project
+
+Infographic
+https://hakimimasstar.github.io/data-mining-project/
+
+Slide
+https://hakimimasstar.github.io/data-mining-project/presentation.html
+
+Dashboard
+https://hakimimasstar.github.io/data-mining-project/dashboard_website.html
+
+Test Input
+https://fresh-rotten-fruit-classification.streamlit.app/
